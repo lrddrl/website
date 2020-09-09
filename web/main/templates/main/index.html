@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+
+
+     <!--new jQuery , Popper.js,  Bootstrap JS  -->
+
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
+       
+
+
+    <!-- need to update the version -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link href="{% static 'css/admin.css'%}" rel="stylesheet" type="text/css" />
+		<link href="{% static 'css/amazeui.css'%}" rel="stylesheet" type="text/css" />
+		<link href="{% static 'css/demo.css" rel="stylesheet'%}" type="text/css" />
+		<link type="text/css" href="{% static 'css/optstyle.css'%}" rel="stylesheet" />
+		<link type="text/css" href="{% static 'css/style.css'%}" rel="stylesheet" />
+		<!-- <script type="text/javascript" src="{% static 'js/jquery-1.7.min.js'%}"></script> -->
+		<script type="text/javascript" src="{% static 'js/quick_links.js'%}"></script>
+		<script type="text/javascript" src="{% static 'js/amazeui.js'%}"></script>
+		<script type="text/javascript" src="{% static 'js/jquery.imagezoom.min.js'%}"></script>
+		<script type="text/javascript" src="{% static 'js/jquery.flexslider.js'%}"></script>
+		<script type="text/javascript" src="{% static 'js/list.js'%}"></script>
+    <!-- <link href="dashboard.css" rel="stylesheet"> -->
+
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/ea720facc5.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Raleway font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css" />
+    <title>Plant Market</title>
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand" href="{% url 'index' %}">
+        Top side bar
+      </a>
+
+
+    </nav>
+
+
+
+
+
+    <!--左侧目录-->
+      <div class="container-fluid">
+      <div class="row">
+       
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block d-block bg-light sidebar collapse">
+          <div class="position-sticky pt-3">
+            <ul class="nav flex-column" >
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#My-Information">
+                  <span data-feather="home">                    
+                  </span>
+                  <h1 class="display-5" >Left side bar</h1>
+                </a>
+              </li>
+
+             
+              
+             
+            </ul>
+            </div>
+        </nav>  
+        
+     
+    <!--！左侧目录-->
+
+    
+    <!--中间内容-->
+    <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          
+            <h1 class="h2">Dashboard</h1>
+             <a name=top> 
+             </a>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                <span data-feather="calendar"></span>
+                Edit Date
+              </button>
+            </div>
+          </div>
+      <!--my information-->
+
+    
+       <a name="My-Information"></a>  
+       <h1 class="display-5">Welcome to XX.com</h1> 
+         
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+       </div>
+       </div>
+ </body>
+    
+
+
+
+    </html>
