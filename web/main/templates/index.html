@@ -55,36 +55,66 @@
       rel="stylesheet"
     />
     <link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css" />
-    <title>Plant Market</title>
+    <title>website</title>
   </head>
 
+
+
   <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+     <!-- navbar -->
+     <nav
+     class="navbar navbar-dark bg-dark navbar-expand-md  fixed-top reveal-bottom"
+   >
+     <button
+       class="navbar-toggler"
+       type="button"
+       data-toggle="collapse"
+       data-target="#navbarNavDropdown"
+       aria-controls="navbarNavDropdown"
+       aria-expanded="false"
+       aria-label="Toggle navigation"
+     >
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <a class="navbar-brand" href="{% url 'index' %}">
+       Smart home
+     </a>
+     <div class="collapse navbar-collapse" id="navbarNavDropdown">
+       <ul class="navbar-nav ml-auto">
+         <li class="nav-item active">
+           <a class="nav-link" href="#"
+             >Homepage <span class="sr-only">(current)</span></a
+           >
+         </li>
+        
+         <li class="nav-item">
+           <a class="nav-link" href="#">chat room</a>
+         </li>
+         
 
-      <a class="navbar-brand" href="{% url 'index' %}">
-        Top side bar
-      </a>
+         <li class="nav-item">
+           <a class="nav-link" href="{% url 'mypage' %}">My page</a>
+         </li>
+
+         <li class="nav-item">
+           <a class="nav-link" href="{% url 'expert' %}">Expert</a>
+         </li>
+
+         <li class="nav-item">
+           <a class="nav-link" href="https://homesmartus.auth.us-west-2.amazoncognito.com/login?client_id=43grpkjadgu6vhseq8pjmns683&response_type=code&scope=aws.cognito.signin.user.admin&redirect_uri=https://google.com">Log in</a>
+         </li>
+
+         <div id="google_translate_element"></div>
+       </ul>
+     </div>
+   </nav>
+   <!-- //navbar -->
 
 
-    </nav>
 
 
 
-
-
-    <!--左侧目录-->
+    <!--left side bar-->
       <div class="container-fluid">
       <div class="row">
        
@@ -113,6 +143,8 @@
     <!--中间内容-->
     <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+
           
             <h1 class="h2">Dashboard</h1>
              <a name=top> 
@@ -124,11 +156,15 @@
               </button>
             </div>
           </div>
-      <!--my information-->
+      
 
     
        <a name="My-Information"></a>  
-       <h1 class="display-5">Welcome to XX.com</h1> 
+       <h1 class="display-5">Welcome to website.com</h1> 
+
+       <div class="press-item col-lg-12 col-sm-12 col-12">
+        <img class="img-fluid-med" src="{% static 'img/a.jpg' %}" alt="shanghai flower" />
+      </div>
          
 
       </div>
