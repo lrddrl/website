@@ -1,185 +1,235 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+		  name="viewport"
+		  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+	
+		<!-- Bootstrap CSS -->
+		<link
+		  rel="stylesheet"
+		  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+		  crossorigin="anonymous"
+		/>
+	
+	
+	
+		 <!--new jQuery , Popper.js,  Bootstrap JS  -->
+	
+			<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+			<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+			<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+			<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+			<script src="https://unpkg.com/feather-icons"></script>
+		   
+	
+	
+		<!-- need to update the version -->
+		<!-- <script src="https://unpkg.com/scrollreveal"></script>
+		<link href="{% static 'css/admin.css'%}" rel="stylesheet" type="text/css" />
+			<link href="{% static 'css/amazeui.css'%}" rel="stylesheet" type="text/css" />
+			<link href="{% static 'css/demo.css" rel="stylesheet'%}" type="text/css" />
+			<link type="text/css" href="{% static 'css/optstyle.css'%}" rel="stylesheet" />
+			<link type="text/css" href="{% static 'css/style.css'%}" rel="stylesheet" />
+			<script type="text/javascript" src="{% static 'js/jquery-1.7.min.js'%}"></script>
+			<script type="text/javascript" src="{% static 'js/quick_links.js'%}"></script>
+			<script type="text/javascript" src="{% static 'js/amazeui.js'%}"></script>
+			<script type="text/javascript" src="{% static 'js/jquery.imagezoom.min.js'%}"></script>
+			<script type="text/javascript" src="{% static 'js/jquery.flexslider.js'%}"></script> -->
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+			<script type="text/javascript" src="{% static 'js/list.js'%}"></script>
+		     <link href="dashboard.css" rel="stylesheet"> -->
+	
+		<!-- fontawesome -->
+		<script
+		  src="https://kit.fontawesome.com/ea720facc5.js"
+		  crossorigin="anonymous"
+		></script>
+		<!-- Raleway font -->
+		<link
+		  href="https://fonts.googleapis.com/css?family=Raleway"
+		  rel="stylesheet"
+		/>
+
+		.div1 img{
+			width:100%;
+			height:auto;
+		}
 
 
-
-     <!--new jQuery , Popper.js,  Bootstrap JS  -->
-
-        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-        <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
-        <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="https://unpkg.com/feather-icons"></script>
-       
-
-
-    <!-- need to update the version -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <link href="{% static 'css/admin.css'%}" rel="stylesheet" type="text/css" />
-		<link href="{% static 'css/amazeui.css'%}" rel="stylesheet" type="text/css" />
-		<link href="{% static 'css/demo.css" rel="stylesheet'%}" type="text/css" />
-		<link type="text/css" href="{% static 'css/optstyle.css'%}" rel="stylesheet" />
-		<link type="text/css" href="{% static 'css/style.css'%}" rel="stylesheet" />
-		<!-- <script type="text/javascript" src="{% static 'js/jquery-1.7.min.js'%}"></script> -->
-		<script type="text/javascript" src="{% static 'js/quick_links.js'%}"></script>
-		<script type="text/javascript" src="{% static 'js/amazeui.js'%}"></script>
-		<script type="text/javascript" src="{% static 'js/jquery.imagezoom.min.js'%}"></script>
-		<script type="text/javascript" src="{% static 'js/jquery.flexslider.js'%}"></script>
-		<script type="text/javascript" src="{% static 'js/list.js'%}"></script>
-    <!-- <link href="dashboard.css" rel="stylesheet"> -->
-
-    <!-- fontawesome -->
-    <script
-      src="https://kit.fontawesome.com/ea720facc5.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Raleway font -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway"
-      rel="stylesheet"
-    />
-    <link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css" />
-    <title>website</title>
-  </head>
-
+		<!-- <link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css" /> -->
+		<title>website</title>
+	  </head>
 
 
   <body>
-     <!-- navbar -->
-     <nav
-     class="navbar navbar-dark bg-dark navbar-expand-md  fixed-top reveal-bottom"
-   >
-     <button
-       class="navbar-toggler"
-       type="button"
-       data-toggle="collapse"
-       data-target="#navbarNavDropdown"
-       aria-controls="navbarNavDropdown"
-       aria-expanded="false"
-       aria-label="Toggle navigation"
-     >
-       <span class="navbar-toggler-icon"></span>
-     </button>
-     <a class="navbar-brand" href="{% url 'index' %}">
-       Smart home
-     </a>
-     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-       <ul class="navbar-nav ml-auto">
-         <li class="nav-item active">
-           <a class="nav-link" href="#"
-             >Homepage <span class="sr-only">(current)</span></a
-           >
-         </li>
-        
-         <li class="nav-item">
-           <a class="nav-link" href="#">chat room</a>
-         </li>
-         
 
-         <li class="nav-item">
-           <a class="nav-link" href="{% url 'mypage' %}">My page</a>
-         </li>
+	<!-- navbar -->
+	
 
-         <li class="nav-item">
-           <a class="nav-link" href="{% url 'expert' %}">Expert</a>
-         </li>
+	<nav
+	class="navbar navbar-dark bg-dark navbar-expand-md  fixed-top reveal-bottom"
+  >
+	<button
+	  class="navbar-toggler"
+	  type="button"
+	  data-toggle="collapse"
+	  data-target="#navbarNavDropdown"
+	  aria-controls="navbarNavDropdown"
+	  aria-expanded="false"
+	  aria-label="Toggle navigation"
+	>
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+	<a class="navbar-brand" href="{% url 'index' %}">
+	  Smart home
+	</a>
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+	  <ul class="navbar-nav ml-auto">
+		<li class="nav-item active">
+		  <a class="nav-link" href="#"
+			>Homepage <span class="sr-only">(current)</span></a
+		  >
+		</li>
+	   
+		<li class="nav-item">
+		  <a class="nav-link" href="#">chat room</a>
+		</li>
+		
 
-         <li class="nav-item">
-           <a class="nav-link" href="https://homesmartus.auth.us-west-2.amazoncognito.com/login?client_id=43grpkjadgu6vhseq8pjmns683&response_type=code&scope=aws.cognito.signin.user.admin&redirect_uri=https://google.com">Log in</a>
-         </li>
+		<li class="nav-item">
+		  <a class="nav-link" href="{% url 'mypage' %}">My page</a>
+		</li>
 
-         <div id="google_translate_element"></div>
-       </ul>
-     </div>
-   </nav>
-   <!-- //navbar -->
+		<li class="nav-item">
+		  <a class="nav-link" href="{% url 'expert' %}">Expert</a>
+		</li>
+
+		<li class="nav-item">
+		  <a class="nav-link" href="https://homesmartus.auth.us-west-2.amazoncognito.com/login?client_id=43grpkjadgu6vhseq8pjmns683&response_type=code&scope=aws.cognito.signin.user.admin&redirect_uri=https://google.com">Log in</a>
+		</li>
+
+		<div id="google_translate_element"></div>
+	  </ul>
+	</div>
+  </nav>
 
 
+	<!-- main -->
 
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="jumbotron card card-block">
+				<h1 class="about-title py-5 lined text-uppercase text-center">
+					OUR MISSION
+				</h1>
+				<p class="text-center">
+					We are an interactive e-commerce website for retail. 
+					Through this website, customers can communicate with professionals and purchase corresponding services.
+				</p>
+				
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4" >
+			<img class="img-fluid-lg" src="{% static 'img/a.jpg' %}" alt="shanghai flower" >
+			<h3 class=text-center>
+				Item Identification
+			</h3>
+			<p>
+				You can upload a photo here, there will be professional knowledge to
+				 help you identify what is in the photo, and can give suggestions according to your needs.
+			</p> 
+			<button type="button" class="btn btn-success btn-lg">
+				click
+			</button>
+		</div>
+		<div class="col-md-4" >
+			<img 
+			
+			class="img-fluid-lg; width:auto;
+			height:auto;
+			max-width:100%;
+			max-height:100%;" src="{% static 'img/b.jpg' %}" alt="" >
+			<h3 class=text-center>
+				Expert entrance
+			</h3>
+			<p>
+				Experts can enter here, find photos of people who need to be appraised, 
+				but don't know what they are for appraisal, and return the results to the 
+				client for a certain amount of remuneration.
+			</p> 
+			<button type="button" class="btn btn-success">
+				click
+			</button>
+		</div>
+		<div class="col-md-4" style=>
+			<img class="img-fluid-lg" src="{% static 'img/c.jpg' %}" alt="" >
+			<h3 class=text-center>
+				chatroom
+			</h3>
+			<p>
+				Expert customers can chat online through an online chat room, 
+				and communicate with each other after the appointment time, the chat room number, etc.
+			</p> 
+			<button type="button" class="btn btn-success">
+				click
+			</button>
+		</div>
+	</div>
 
+	<hr class="col-md-12">
 
-    <!--left side bar-->
-      <div class="container-fluid">
-      <div class="row">
-       
-        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block d-block bg-light sidebar collapse">
-          <div class="position-sticky pt-3">
-            <ul class="nav flex-column" >
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#My-Information">
-                  <span data-feather="home">                    
-                  </span>
-                  <h1 class="display-5" >Left side bar</h1>
-                </a>
-              </li>
-
-             
-              
-             
-            </ul>
-            </div>
-        </nav>  
-        
-     
-    <!--！左侧目录-->
+	<div class="row">
+		<div class="col-md-4">
+			<h2>
+				contact us 
+			</h2> 
+			<address>
+				 <strong>xxx, Inc.</strong>
+				 <br> 
+				 30 East Swedesford Rd, 
+				 <br>
+				  Malvern, PA 19355
+				 <br> 				
+				 <abbr title="Phone">Phone: </abbr>
+				  (123) 456-7890
+			</address>
+		</div>
+		<div class="col-md-4">
+			<h3>
+				About Us
+			</h3>
+			<p>
+				We are a novel high-tech global company,
+				 and we are committed to making people's lives better and more convenient to live.
+				  We are committed to using high technology to create a better world.
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h3>
+				social media
+			</h3>
+			<p>
+				Follow us on social media
+			</p>
+			<P>
+				Twitter
+			</P>
+			<p>
+				Facebook
+			</p>   
+		</div>
+	</div>
+</div>
 
     
-    <!--中间内容-->
-    <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-
-
-          
-            <h1 class="h2">Dashboard</h1>
-             <a name=top> 
-             </a>
-            <div class="btn-toolbar mb-2 mb-md-0">
-              <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span data-feather="calendar"></span>
-                Edit Date
-              </button>
-            </div>
-          </div>
-      
-
-    
-       <a name="My-Information"></a>  
-       <h1 class="display-5">Welcome to website.com</h1> 
-
-       <div class="press-item col-lg-12 col-sm-12 col-12">
-        <img class="img-fluid-med" src="{% static 'img/a.jpg' %}" alt="shanghai flower" />
-      </div>
-         
-
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-       </div>
-       </div>
- </body>
-    
-
-
-
-    </html>
+  </body>
+</html>
