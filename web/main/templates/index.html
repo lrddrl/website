@@ -29,18 +29,7 @@
 		   
 	
 	
-		<!-- need to update the version -->
-		<!-- <script src="https://unpkg.com/scrollreveal"></script>
-		<link href="{% static 'css/admin.css'%}" rel="stylesheet" type="text/css" />
-			<link href="{% static 'css/amazeui.css'%}" rel="stylesheet" type="text/css" />
-			<link href="{% static 'css/demo.css" rel="stylesheet'%}" type="text/css" />
-			<link type="text/css" href="{% static 'css/optstyle.css'%}" rel="stylesheet" />
-			<link type="text/css" href="{% static 'css/style.css'%}" rel="stylesheet" />
-			<script type="text/javascript" src="{% static 'js/jquery-1.7.min.js'%}"></script>
-			<script type="text/javascript" src="{% static 'js/quick_links.js'%}"></script>
-			<script type="text/javascript" src="{% static 'js/amazeui.js'%}"></script>
-			<script type="text/javascript" src="{% static 'js/jquery.imagezoom.min.js'%}"></script>
-			<script type="text/javascript" src="{% static 'js/jquery.flexslider.js'%}"></script> -->
+
 
 			<script type="text/javascript" src="{% static 'js/list.js'%}"></script>
 		     <link href="dashboard.css" rel="stylesheet"> -->
@@ -86,7 +75,7 @@
 	>
 	  <span class="navbar-toggler-icon"></span>
 	</button>
-	<a class="navbar-brand" href="{% url 'index' %}">
+	<a class="navbar-brand" href="/chat/">
 	  Smart home
 	</a>
 	<div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -96,28 +85,48 @@
 			>Homepage <span class="sr-only">(current)</span></a
 		  >
 		</li>
-	   
-		<li class="nav-item">
-		  <a class="nav-link" href="#">chat room</a>
-		</li>
 		
+		{% if request.user.is_active %}
+
 
 		<li class="nav-item">
-		  <a class="nav-link" href="{% url 'mypage' %}">My page</a>
+			<a class="nav-link" >{{ request.user.username }}</a>
 		</li>
 
 		<li class="nav-item">
-		  <a class="nav-link" href="{% url 'expert' %}">Expert</a>
+			<a class="nav-link" href="/logout/">logout</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/chatroom/">Chat room</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="{% url 'mypage' %}">My page</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="{% url 'expert' %}">Expert</a>
 		</li>
 
+		{% else %}
+
 		<li class="nav-item">
-		  <a class="nav-link" href="https://homesmartus.auth.us-west-2.amazoncognito.com/login?client_id=43grpkjadgu6vhseq8pjmns683&response_type=code&scope=aws.cognito.signin.user.admin&redirect_uri=https://google.com">Log in</a>
+		  <a class="nav-link" href="/chatroom/">Chat room</a>
+		</li>		
+		<li class="nav-item">
+		  <a class="nav-link" href="/regist/">Regist</a>
 		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/login/">Hello,sign in</a>
+		</li>
+
+		{% endif %}
 
 		<div id="google_translate_element"></div>
 	  </ul>
 	</div>
   </nav>
+
+
+
 
 
 	<!-- main -->
@@ -147,10 +156,15 @@
 				You can upload a photo here, there will be professional knowledge to
 				 help you identify what is in the photo, and can give suggestions according to your needs.
 			</p> 
-			<button type="button" class="btn btn-success btn-lg">
-				click
-			</button>
+			<a href="{% url 'mypage' %}">
+				<button type="button" class="btn btn-success btn-lg">
+				   click
+			    </button>
+			</a>
 		</div>
+
+    
+
 		<div class="col-md-4" >
 			<img 
 			
@@ -166,10 +180,14 @@
 				but don't know what they are for appraisal, and return the results to the 
 				client for a certain amount of remuneration.
 			</p> 
-			<button type="button" class="btn btn-success">
-				click
-			</button>
+			<a href="{% url 'expert' %}">
+				<button type="button" class="btn btn-success btn-lg">
+				   click
+			    </button>
+			</a>
 		</div>
+
+
 		<div class="col-md-4" style=>
 			<img class="img-fluid-lg" src="{% static 'img/c.jpg' %}" alt="" >
 			<h3 class=text-center>
@@ -179,9 +197,11 @@
 				Expert customers can chat online through an online chat room, 
 				and communicate with each other after the appointment time, the chat room number, etc.
 			</p> 
-			<button type="button" class="btn btn-success">
-				click
-			</button>
+			<a href="#">
+				<button type="button" class="btn btn-success btn-lg">
+				   click
+			    </button>
+			</a>
 		</div>
 	</div>
 
@@ -229,6 +249,15 @@
 		</div>
 	</div>
 </div>
+
+
+<div>
+	<a href = "https://www.baidu.com/" >
+	<button >点我跳转到度娘！</button >
+    </a >
+
+</div>
+
 
     
   </body>

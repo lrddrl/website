@@ -88,6 +88,45 @@
               >Homepage <span class="sr-only">(current)</span></a
             >
           </li>
+
+
+
+          {% if request.user.is_active %}
+
+
+          <li class="nav-item">
+            <a class="nav-link" >{{ request.user.username }}</a>
+          </li>
+      
+          <li class="nav-item">
+            <a class="nav-link" href="/logout/">logout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Chat room</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'mypage' %}">My page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'expert' %}">Expert</a>
+          </li>
+      
+          {% else %}
+      
+          <li class="nav-item">
+            <a class="nav-link" href="#">Chat room</a>
+          </li>		
+          <li class="nav-item">
+            <a class="nav-link" href="/regist/">Regist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login/">Hello,sign in</a>
+          </li>
+      
+          {% endif %}
+
+
+
           
           <div id="google_translate_element"></div>
         </ul>
