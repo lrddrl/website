@@ -10,9 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
-import pymysql
-pymysql.install_as_MySQLdb()
-
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -24,12 +21,13 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'u$p=c-&d@%(51lbqa_)msrk0tiqdj*f7-k(9nfrgc0ov4a+4en'
+# Read from the environment; the fallback is for local development only.
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'dev-only-insecure-key-change-me')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() in ('1', 'true', 'yes')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [h for h in os.environ.get('DJANGO_ALLOWED_HOSTS', '').split(',') if h]
 
 
 
@@ -89,28 +87,29 @@ ASGI_APPLICATION = 'web.asgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 
-"""
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+# SQLite by default so the project runs with zero setup; set DB_ENGINE=mysql
+# (plus the DB_* variables below) to use MySQL.
+if os.environ.get('DB_ENGINE', 'sqlite') == 'mysql':
+    import pymysql
+    pymysql.install_as_MySQLdb()
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': os.environ.get('DB_NAME', 'capstone'),
+            'USER': os.environ.get('DB_USER', 'root'),
+            'PASSWORD': os.environ.get('DB_PASSWORD', ''),
+            'HOST': os.environ.get('DB_HOST', 'localhost'),
+            'PORT': os.environ.get('DB_PORT', '3306'),
+        }
     }
-}
-
-"""
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'capstone', 
-        'USER':'root', 
-        'PASSWORD':'1234567890', # password for mysql
-        'HOST':'localhost', #
-        'PORT':'3306', 
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
-
-
 
 
 # Password validation
